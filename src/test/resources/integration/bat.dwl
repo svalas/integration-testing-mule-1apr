@@ -7,7 +7,7 @@ import * from bat::Mutable
 suite("order-test-suite") in [
 	
   it("Obtains all orders data") in[
-    GET `https://orders-app-6ejntd.5sc6y6-2.usa-e2.cloudhub.io` with {
+    GET `https://orders-app-6ejntd.5sc6y6-2.usa-e2.cloudhub.io/orders` with {
       "headers": {
       	"Accept" : "application/json"
       }
@@ -19,7 +19,7 @@ suite("order-test-suite") in [
   ],
   
  it("Creates an order") in[
-    POST `https://orders-app-6ejntd.5sc6y6-2.usa-e2.cloudhub.io` with {
+    POST `https://orders-app-6ejntd.5sc6y6-2.usa-e2.cloudhub.io/orders` with {
       "headers": {
       	"Accept" : "application/json",
       	"Content-Type" : "application/json",
